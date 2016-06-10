@@ -35,5 +35,9 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/bloggify-theme-renderer/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/bloggify-theme-renderer#readme"
+  "homepage": "https://github.com/IonicaBizau/bloggify-theme-renderer#readme",
+  "dependencies": {
+    "find-file-in-dirs": "^1.0.2",
+    "read-file-cache": "^1.0.0"
+  }
 }
