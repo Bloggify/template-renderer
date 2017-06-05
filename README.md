@@ -1,7 +1,7 @@
 
 # bloggify-theme-renderer
 
- [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![AMA](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/bloggify-theme-renderer.svg)](https://www.npmjs.com/package/bloggify-theme-renderer) [![Downloads](https://img.shields.io/npm/dt/bloggify-theme-renderer.svg)](https://www.npmjs.com/package/bloggify-theme-renderer) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+ [![Version](https://img.shields.io/npm/v/bloggify-theme-renderer.svg)](https://www.npmjs.com/package/bloggify-theme-renderer) [![Downloads](https://img.shields.io/npm/dt/bloggify-theme-renderer.svg)](https://www.npmjs.com/package/bloggify-theme-renderer)
 
 > The default theme renderer for Bloggify.
 
@@ -22,19 +22,107 @@ const bloggifyThemeRenderer = require("bloggify-theme-renderer");
 console.log(bloggifyThemeRenderer());
 ```
 
+## :question: Get Help
+
+There are few ways to get help:
+
+ 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
+ 2. For bug reports and feature requests, open issues. :bug:
+ 3. For direct and quick help from me, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
+
 ## :memo: Documentation
 
 
-### `bloggifyThemeRenderer(a, b)`
-BloggifyThemeRenderer
-The default theme renderer for Bloggify.
+### constructor
+
+BloggifyTemplate
+Creates a new instance of `BloggifyTemplate`.
 
 #### Params
-- **Number** `a`: Param descrpition.
-- **Number** `b`: Param descrpition.
+- **String** `name`: The name of the template.
+- **String** `tmplPath`: The template path.
+
+### constructor
+
+BloggifyThemeRenderer
+Creates a new instance of `BloggifyThemeRenderer`.
+
+#### Params
+- **Object** `bloggify`: The bloggify instance.
+
+### `getTemplate(name, cb)`
+Fetch a template by its name.
+
+#### Params
+- **String** `name`: The template name.
+- **Function** `cb`: The callback function.
+
+### `registerTemplate(name, tmplPath, usePathName, reregister)`
+Use this method to register templates.
+
+Usages:
+
+```js
+registerTemplate(name, path)
+registerTemplate(path)
+registerTemplate(index, path)
+```
+
+#### Params
+- **String** `name`: The template name.
+- **String** `tmplPath`: The template path.
+- **Boolean** `usePathName`: Wether to use the pathname (in the template cache) or not.
+- **Boolean** `reregister`: Wether to enforce the template reregistering.
 
 #### Return
-- **Number** Return description.
+- **BloggifyTemplate** The template object.
+
+### `getRenderer(ext)`
+Gets the template renderer for that extension.
+
+#### Params
+- **String** `ext`: The renderer extension.
+
+#### Return
+- **Function** The renderer function.
+
+### `registerRenderer(ext, func)`
+Creates a new renderer.
+
+#### Params
+- **String** `ext`: The renderer extension.
+- **Function** `func`: The renderer handler.
+
+### `renderInternalServerError(ctx, data, err, cb)`
+Renders the 500 server error and logs the error.
+
+#### Params
+- **Context** `ctx`: The context.
+- **Object** `data`: The template data.
+- **Error** `err`: The error to render.
+- **Function** `cb`: The callback function.
+
+### `beforeRender(url, method, cb, transType)`
+Appends a hook that is executed before rendering the template.
+
+#### Params
+- **String** `url`: The render url.
+- **String** `method`: The methods of the renderer.
+- **Function** `cb`: The callback function.
+- **Object** `transType`: The transform type.
+
+#### Return
+- **Hook** The new hook will be returned.
+
+### `render(ctx, tmplName, data, cb)`
+Renders a template for a given context.
+
+#### Params
+- **Context** `ctx`: The context.
+- **String** `tmplName`: The template name.
+- **Object** `data`: The template data.
+- **Function** `cb`: The callback function.
 
 
 
@@ -42,14 +130,12 @@ The default theme renderer for Bloggify.
 Have an idea? Found a bug? See [how to contribute][contributing].
 
 
+
 ## :scroll: License
 
-[MIT][license] © [Ionică Bizău][website]
+[MIT][license] © [Bloggify][website]
 
-[paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
-[donate-now]: http://i.imgur.com/6cMbHOC.png
-
-[license]: http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(http%3A%2F%2Fionicabizau.net)&year=2016#license-mit
-[website]: http://ionicabizau.net
+[license]: http://showalicense.com/?fullname=Bloggify%20%3Csupport%40bloggify.org%3E%20(https%3A%2F%2Fbloggify.org)&year=2016#license-mit
+[website]: https://bloggify.org
 [contributing]: /CONTRIBUTING.md
 [docs]: /DOCUMENTATION.md
