@@ -1,14 +1,14 @@
 
-# bloggify-theme-renderer
+# bloggify-template-renderer
 
- [![Version](https://img.shields.io/npm/v/bloggify-theme-renderer.svg)](https://www.npmjs.com/package/bloggify-theme-renderer) [![Downloads](https://img.shields.io/npm/dt/bloggify-theme-renderer.svg)](https://www.npmjs.com/package/bloggify-theme-renderer)
+ [![Version](https://img.shields.io/npm/v/bloggify-template-renderer.svg)](https://www.npmjs.com/package/bloggify-template-renderer) [![Downloads](https://img.shields.io/npm/dt/bloggify-template-renderer.svg)](https://www.npmjs.com/package/bloggify-template-renderer)
 
-> The default theme renderer for Bloggify.
+> The default template renderer for Bloggify.
 
 ## :cloud: Installation
 
 ```sh
-$ npm i --save bloggify-theme-renderer
+$ npm i --save bloggify-template-renderer
 ```
 
 
@@ -17,7 +17,7 @@ $ npm i --save bloggify-theme-renderer
 
 
 ```js
-const bloggifyThemeRenderer = require("bloggify-theme-renderer");
+const bloggifyThemeRenderer = require("bloggify-template-renderer");
 
 console.log(bloggifyThemeRenderer());
 ```
@@ -45,8 +45,8 @@ Creates a new instance of `BloggifyTemplate`.
 
 ### constructor
 
-BloggifyThemeRenderer
-Creates a new instance of `BloggifyThemeRenderer`.
+BloggifyTemplateRenderer
+Creates a new instance of `BloggifyTemplateRenderer`.
 
 #### Params
 - **Object** `bloggify`: The bloggify instance.

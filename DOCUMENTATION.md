@@ -13,8 +13,8 @@ Creates a new instance of `BloggifyTemplate`.
 
 ### constructor
 
-BloggifyThemeRenderer
-Creates a new instance of `BloggifyThemeRenderer`.
+BloggifyTemplateRenderer
+Creates a new instance of `BloggifyTemplateRenderer`.
 
 #### Params
 - **Object** `bloggify`: The bloggify instance.
