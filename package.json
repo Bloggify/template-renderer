@@ -1,9 +1,9 @@
 {
-  "name": "bloggify-theme-renderer",
-  "description": "The default theme renderer for Bloggify.",
+  "name": "bloggify-template-renderer",
+  "description": "The default template renderer for Bloggify.",
   "keywords": [
     "bloggify",
-    "theme",
+    "template",
     "renderer",
     "the",
     "default",
@@ -30,12 +30,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Bloggify/theme-renderer.git"
+    "url": "git+ssh://git@github.com/Bloggify/template-renderer.git"
   },
   "bugs": {
-    "url": "https://github.com/Bloggify/theme-renderer/issues"
+    "url": "https://github.com/Bloggify/template-renderer/issues"
   },
-  "homepage": "https://github.com/Bloggify/theme-renderer#readme",
+  "homepage": "https://github.com/Bloggify/template-renderer#readme",
   "dependencies": {
     "deffy": "^2.2.2",
     "find-file-in-dirs": "^1.0.2",
