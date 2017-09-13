@@ -8,6 +8,7 @@ BloggifyTemplate
 Creates a new instance of `BloggifyTemplate`.
 
 #### Params
+
 - **String** `name`: The name of the template.
 - **String** `tmplPath`: The template path.
 
@@ -17,12 +18,14 @@ BloggifyTemplateRenderer
 Creates a new instance of `BloggifyTemplateRenderer`.
 
 #### Params
+
 - **Object** `bloggify`: The bloggify instance.
 
 ### `getTemplate(name, cb)`
 Fetch a template by its name.
 
 #### Params
+
 - **String** `name`: The template name.
 - **Function** `cb`: The callback function.
 
@@ -38,6 +41,7 @@ registerTemplate(index, path)
 ```
 
 #### Params
+
 - **String** `name`: The template name.
 - **String** `tmplPath`: The template path.
 - **Boolean** `usePathName`: Wether to use the pathname (in the template cache) or not.
@@ -50,6 +54,7 @@ registerTemplate(index, path)
 Gets the template renderer for that extension.
 
 #### Params
+
 - **String** `ext`: The renderer extension.
 
 #### Return
@@ -59,6 +64,7 @@ Gets the template renderer for that extension.
 Creates a new renderer.
 
 #### Params
+
 - **String** `ext`: The renderer extension.
 - **Function** `func`: The renderer handler.
 
@@ -66,6 +72,7 @@ Creates a new renderer.
 Renders the 500 server error and logs the error.
 
 #### Params
+
 - **Context** `ctx`: The context.
 - **Object** `data`: The template data.
 - **Error** `err`: The error to render.
@@ -75,6 +82,7 @@ Renders the 500 server error and logs the error.
 Appends a hook that is executed before rendering the template.
 
 #### Params
+
 - **String** `url`: The render url.
 - **String** `method`: The methods of the renderer.
 - **Function** `cb`: The callback function.
@@ -87,6 +95,7 @@ Appends a hook that is executed before rendering the template.
 Renders a template for a given context.
 
 #### Params
+
 - **Context** `ctx`: The context.
 - **String** `tmplName`: The template name.
 - **Object** `data`: The template data.
